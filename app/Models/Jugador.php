@@ -11,9 +11,9 @@ class Jugador extends Model
 
     protected $table = 'jugadores';
 
-     //  Un jugador pertenece a un equipo
+     
      public function equipo()
      {
-         return $this->belongsTo(Equipo::class);  // Un jugador pertenece a un solo equipo
+         return $this->belongsTo(Equipo::class);  
      }
 }
