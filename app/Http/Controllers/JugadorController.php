@@ -18,7 +18,7 @@ class JugadorController extends Controller
     public function index($equipoId)
     {
         $equipo = Equipo::findOrFail($equipoId);
-        $jugadores = $equipo->jugadores;  // Obtener los jugadores del equipo
+        $jugadores = $equipo->jugadores;  
 
         return view('jugadores.index', compact('equipo', 'jugadores'));
     }
