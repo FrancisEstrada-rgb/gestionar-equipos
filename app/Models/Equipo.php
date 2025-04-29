@@ -9,9 +9,9 @@ class Equipo extends Model
 {
     use HasFactory;
 
-     // Relación uno a muchos con Jugadores
+     
      public function jugadores()
      {
-         return $this->hasMany(Jugador::class);  // Un equipo tiene muchos jugadores
+         return $this->hasMany(Jugador::class);  
      }
 }
