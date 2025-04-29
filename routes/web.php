@@ -25,10 +25,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-// Rutas protegidas por autenticación para Equipos y Jugadores
+
 Route::middleware('auth')->group(function () {
 
-    // Rutas para CRUD de Equipos
+    
     Route::get('/equipos', [EquipoController::class, 'index'])->name('equipos.index');
     Route::get('/equipos/{id}', [EquipoController::class, 'show'])->name('equipos.show')->where('id', '[0-9]+');
     Route::get('/equipos/crear', [EquipoController::class, 'create'])->name('equipos.create');
@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/equipos/{id}', [EquipoController::class, 'destroy'])->name('equipos.destroy')->where('id', '[0-9]+');
 
     
-    // Rutas para CRUD de Jugadores
+   
     Route::get('/equipos/{equipoId}/jugadores', [JugadorController::class, 'index'])->name('jugadores.index');
     Route::get('/equipos/{equipoId}/jugadores/crear', [JugadorController::class, 'create'])->name('jugadores.create');
     Route::post('/equipos/{equipoId}/jugadores', [JugadorController::class, 'store'])->name('jugadores.store');
