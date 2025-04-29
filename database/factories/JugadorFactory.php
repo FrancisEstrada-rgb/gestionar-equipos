@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class JugadorFactory extends Factory
 {
     /**
-     * Define the model's default state.
+     * 
      *
      * @return array<string, mixed>
      */
