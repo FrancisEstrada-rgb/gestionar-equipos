@@ -52,7 +52,7 @@ class EquipoController extends Controller
     {
        
         $equipo = Equipo::findOrFail($id);
-        return view('equipos.show', compact('equipo')); // Mostrar los detalles del equipo
+        return view('equipos.show', compact('equipo')); 
     }
 
    
@@ -60,7 +60,7 @@ class EquipoController extends Controller
     {
         
         $equipo = Equipo::findOrFail($id);
-        return view('equipos.edit', compact('equipo')); // Mostrar el formulario de edición
+        return view('equipos.edit', compact('equipo')); 
     }
 
    
@@ -85,7 +85,7 @@ class EquipoController extends Controller
     {
        
         $equipo = Equipo::findOrFail($id);
-        $equipo->delete(); // Eliminar el equipo
+        $equipo->delete(); 
 
         return redirect()->route('equipos.index')->with('success', 'Equipo eliminado correctamente');
     }
