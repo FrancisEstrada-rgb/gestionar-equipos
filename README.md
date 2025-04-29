@@ -24,7 +24,7 @@
 
 Registrar jugadores y equipos
 
-Ver todos los equipos registrados
+Ver todos los equipos  y jugadores registrados
 
 Eliminar datos si es necesario
 
